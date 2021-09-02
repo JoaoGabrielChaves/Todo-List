@@ -29,8 +29,8 @@ const atualizarTela = () => {
 }
 
 const inserirItem = (evento) => {
-    const tecla = evento.key;//Aqui ele pega a chave(a tecla) que foi pressionada no evento e atribui a const tecla.
-    const texto = evento.target.value;//Aqui ele pega o valor do input e atribui a const texto.
+    const tecla = evento.key;
+    const texto = evento.target.value;
     if (tecla === 'Enter') {
 
         if (texto == '') {
@@ -59,11 +59,11 @@ const atualizarItem = (indice) => {
 }
 
 const clickItem = (evento) => {
-    const elemento = evento.target;//target é uma referência ao objeto que enviou o evento, quase como um this, mas os dois são diferentes. Podemos dizer que a variável 'elemento' recebeu o evento click.
-    if (elemento.type === 'button') {//Se o tipo de click vir de um type="button", execute{}.
+    const elemento = evento.target;
+    if (elemento.type === 'button') {
         const indice = elemento.dataset.indice;
         removerItem(indice);
-    } else if (elemento.type === 'checkbox') {//Senão, se o tipo de click vir de um type="checkbox", execute{}.
+    } else if (elemento.type === 'checkbox') {
         const indice = elemento.dataset.indice;
         atualizarItem(indice);
     }
@@ -74,27 +74,8 @@ function setFocus() {
 }//Para o foco continuar no input text após a página ser atualizada
 
 
-document.getElementById('add_list').addEventListener('keypress', inserirItem);//Adicionei um evento, para quando o input estiver 'focus', e for clicado enter, ele executa a função "inserirItem".
+document.getElementById('add_list').addEventListener('keypress', inserirItem);
 document.getElementById('todoList').addEventListener('click', clickItem);
 
 atualizarTela()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const even_or_odd = (number) => {
-    return number % 2 === 0 ? 'Even' : 'Odd';
-}
-
-console.log(even_or_odd(8))
