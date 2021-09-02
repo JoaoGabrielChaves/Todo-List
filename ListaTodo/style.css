@@ -1,0 +1,190 @@
+/*FONT-FAMILY*/
+@import  url( 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap' );
+
+:root{
+    --standard-font: 'Poppins' , sans-serif;
+}
+
+*{
+    font-family: var(--standard-font);
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: #122b3f7b;
+}
+
+#base_list{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 550px;
+    height: 90%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(89, 89, 89, 0.741);
+    background-color: #f5f5f593;
+
+    text-align: center;
+    overflow:auto;
+}
+/*SCROLL*/
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+    border-radius: 40px;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 40px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #122b3f7b;
+    border-radius: 40px;
+}
+
+/*INPUT AND BUTTON BACKGROUND*/
+
+#input_back{
+    background-color: #ffffff;
+    border: 1px solid #DDD;
+    margin: 0px 28px;
+    border-radius: 5px;
+    height: 35px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*TITLE OF THE LIST*/
+#title_list{
+    height: 40px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 35px;
+    padding: 15px 0px;
+}
+
+#title_text{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+/*INPUT ADD*/
+#add_list{    
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    padding-left: 5px;
+}
+
+#add_list:focus, input:focus{
+    box-shadow:  0 0 0 0;
+    outline: 0;
+}
+
+#add_list::placeholder{
+    padding-left: 5px;
+    color: #0000003c;
+    font-size: 1rem;
+}
+
+/*INPUT BUTTON ADD*/
+
+/* #button_add_list{   
+    border: none;
+    background-color: #12da00;
+    color: #00000091;
+
+    width: 15px;
+    height: 1.9em;
+    margin: .8px 0;
+
+    border-top-right-radius:4px;
+    border-bottom-right-radius: 4px; 
+    
+}
+
+#button_add_list:hover{
+    background-color: #13e300bb;
+    transition: .2s;
+    cursor: pointer;
+} */
+
+/*TODO LIST*/
+
+.todo_list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0px;
+}
+
+.todo_item > input[type='checkbox']:checked + div{/*PARA RISCAR AS TAREFAS QUE FOREM CONCLUÍDAS*/
+    text-decoration: line-through;
+    color: rgba(197, 28, 28, 0.372);
+    transition: .2s;
+}
+
+.todo_item{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    
+    transition: .3s;
+
+    width: 80%;
+    padding: 3px 0px;
+    margin: 2px ;
+    background-color: #ffffff6d;
+    box-shadow: 1px 1px 3px #00000020;
+    border-radius: 2px;
+    
+}
+
+.todo_item:hover{
+    background-color: #c7c7c741;
+    cursor: pointer;
+    box-shadow: inset 0 0 4px #0000005d;
+}
+
+.todo_item input{
+    margin: 3.5px 0px 0px 3px;
+}
+
+.text_into{
+    font-size: 16px;
+    margin: 0px 1px;
+}
+
+.todo_item .checkbox{
+    height: 17px;
+    border: none;
+}    
+
+.bt-list{
+    background-color: #df0e0eb8;
+    border: none;
+    border-radius: 1px;
+    width: 15px;
+    height: 20px;
+    
+    margin: 2px;
+}
+
+.bt-list:hover{
+    background-color: #f40a0ad4;
+    cursor: pointer;
+    transition: .1s;
+}
+
